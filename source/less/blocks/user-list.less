@@ -1,0 +1,52 @@
+.user-list {
+  display: flex;
+  justify-content: space-between;
+
+  width: 270px;
+  margin-bottom: 51px;
+}
+
+.user-list__authorization {
+  flex-grow: 2;
+
+  font-size: 17px;
+  line-height: 176%;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: @basic-blue-dark;
+
+  background-color: @basic-yellow;
+  border-radius: 25px;
+}
+
+.user-list__call,
+.user-list__email {
+  flex-grow: 1;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+  }
+}
+
+.user-list__call::before {
+  background-color: @special-orange;
+}
+
+.user-list__email::before {
+  background-color: @special-yellow-dark;
+}
+
+.user-list__call--hidden,
+.user-list__email--hidden {
+  display: none;
+}
