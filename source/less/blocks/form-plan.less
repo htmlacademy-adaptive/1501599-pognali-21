@@ -1,0 +1,121 @@
+// Button
+
+.form-plan__button {
+  padding: 7px 40px;
+
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  border-radius: 20px;
+}
+
+.form-plan__button--back {
+  letter-spacing: 0.01em;
+  background-color: transparent;
+}
+
+// Form
+
+
+.form-plan__title,
+.form-plan__label,
+.form-plan__input,
+.form-plan__children,
+.form-plan__select {
+  color: @basic-blue;
+}
+
+.form-plan__step {
+  margin-bottom: 10px;
+  padding: 25px;
+
+  background-color: @white;
+  border-radius: 10px;
+
+  border: none;
+}
+
+.form-plan__title {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 100%;
+  border-width: inherit;
+}
+
+.form-plan__desc {
+  .section-text();
+}
+
+.form-plan__label,
+.form-plan__unit,
+.form-plan__input {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+
+  text-transform: uppercase;
+}
+
+.form-plan__label {
+  letter-spacing: 0.09em;
+}
+
+.form-plan__unit {
+  letter-spacing: 0.07em;
+  color: @basic-blue-opacity-30;
+}
+
+.form-plan__input,
+.form-plan__input-children + .form-plan__children::before,
+.form-plan__select {
+  .fields-border();
+}
+
+.form-plan__input {
+  padding: 16px 14px 13px 14px;
+
+  font-size: 14px;
+}
+
+.form-plan__children {
+  position: relative;
+  display: block;
+
+  padding-left: 39px;
+  font-size: 15px;
+}
+
+.form-plan__input-children + .form-plan__children::before {
+  content: "";
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 26px;
+  height: 26px;
+
+  cursor: pointer;
+}
+
+.form-plan__select {
+  padding: 11px;
+
+  width: 100%;
+
+  font-family: @main-font;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  background-color: @white;
+}
+
+.form-plan__select--add {
+  background-color: @basic-blue-light;
+  border: none;
+}
