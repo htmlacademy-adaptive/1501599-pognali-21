@@ -1,0 +1,69 @@
+.plans {
+  padding: 28px 0 59px 0;
+  color: @basic-blue;
+
+  background-color: @special-blue-light;
+  .border-radius();
+}
+
+.plans__title {
+  .section-title();
+  color: @basic-blue;
+}
+
+.plans__item {
+  padding: 24px;
+
+  background-color: @white;
+  border-radius: 10px;
+}
+
+.plans__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.plans__number,
+.plans__country {
+  font-size: 16px;
+  line-height: 100%;
+}
+
+.plans__number,
+.plans__companions,
+.plans__date,
+.plans__button {
+  font-weight: 500;
+}
+
+.plans__country {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.plans__companions,
+.plans__date,
+.plans__button {
+  font-size: 14px;
+  line-height: 100%;
+
+  text-transform: uppercase;
+}
+
+.plans__companions,
+.plans__date {
+  letter-spacing: 0.06em;
+}
+
+.plans__companions {
+  margin-bottom: 5px;
+}
+
+.plans__date {
+  margin-bottom: 24px;
+}
+
+.plans__button {
+  letter-spacing: 0.03em;
+  color: @black-opacity-30;
+  background-color: transparent;
+}
