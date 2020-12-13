@@ -1,0 +1,36 @@
+.pagination {
+  padding: 25px 28px;
+
+  background-color: @white;
+  border-radius: 20px;
+}
+
+.pagination__numbers {
+  display: flex;
+}
+
+.pagination__link {
+  padding: 16px 20px;
+
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+
+  text-transform: uppercase;
+
+  color: @basic-blue;
+}
+
+.pagination__link--current,
+.pagination__link:active {
+  background-color: @basic-yellow;
+  border-radius: 50%;
+}
+
+.pagination__link:hover {
+  opacity: 0.6;
+}
+
+.pagination__link:active {
+  opacity: 1;
+}

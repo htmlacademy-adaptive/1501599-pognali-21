@@ -1,0 +1,68 @@
+.level-filter__level-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  margin-bottom: 21px;
+}
+
+.level-filter__input {
+  width: 100%;
+
+  padding: 13px 10px 10px;
+
+  text-align: center;
+
+  border: 1px solid @basic-grey-border;
+  background-color: @white;
+}
+
+.level-filter__input--min {
+  border-right: none;
+
+  border-radius: 4px 0 0 4px;
+}
+
+.level-filter__input--max {
+  border-left: none;
+
+  border-radius: 0 4px 4px 0;
+}
+
+// Controls
+
+.level-filter__range-controls {
+  position: relative;
+  padding: 5px 0;
+}
+
+.level-filter__scale {
+  height: 2px;
+
+  background-color: @basic-blue-opacity-20;
+}
+
+.level-filter__bar {
+  width: 30%;
+  height: 2px;
+
+  background-color: @basic-blue;
+}
+
+.level-filter__toggle {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 10px;
+  height: 10px;
+
+  background-color: @basic-blue;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.level-filter__toggle--max {
+  left: 30%;
+}
