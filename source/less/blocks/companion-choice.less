@@ -1,0 +1,88 @@
+.companion-choice {
+  margin-bottom: 28px;
+}
+
+.companion-choice__form {
+  padding: 26px 25px 22px 25px;
+
+  background-color: @basic-yellow;
+
+  border-radius: 20px;
+}
+
+.companion-choice__filter,
+.companion-choice__reversal {
+  font-weight: bold;
+  color: @basic-blue;
+  border: none;
+}
+
+.companion-choice__filter {
+  padding-bottom: 20px;
+}
+
+.companion-choice__title {
+  margin-bottom: 23px;
+
+  font-size: 22px;
+  line-height: 22px;
+
+  letter-spacing: 0.02em;
+}
+
+.companion-choice__item:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.companion-choice__reversal {
+  width: 100%;
+
+  margin-bottom: 16px;
+  padding: 12px 0 0 0;
+
+  font-family: @main-font;
+  font-size: 16px;
+  line-height: 18px;
+
+  text-align: left;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  border-top: 1px solid @basic-yellow-border;
+}
+
+.companion-choice__label {
+  display: block;
+
+  position: relative;
+  padding-left: 27px;
+
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  color: @black;
+}
+
+.companion-choice__checkbox + .companion-choice__label::before {
+  content: "";
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 18px;
+  height: 18px;
+
+  background-color: @white;
+  .fields-border();
+  border: none;
+  cursor: pointer;
+}
+
+.companion-choice__button {
+  width: 100%;
+  padding: 14px;
+
+  background-color: @white;
+  border-radius: 25px;
+}

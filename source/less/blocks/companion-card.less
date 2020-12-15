@@ -1,0 +1,101 @@
+.companion-card__item {
+  margin-bottom: 10px;
+  padding: 14px 20px 23px 20px;
+  background-color: @white;
+
+  border-radius: 20px;
+}
+
+.companion-card__item:last-child {
+  margin-bottom: 24px;
+}
+
+.companion-card__name,
+.companion-card__likes {
+  font-weight: bold;
+}
+
+.companion-card__name {
+  position: relative;
+
+  font-size: 20px;
+  line-height: 20px;
+
+  color: @basic-blue;
+}
+
+.companion-card__name::after {
+  content: "";
+  position: absolute;
+
+  top: 5px;
+  left: 200px;
+
+  width: 6px;
+  height: 6px;
+
+  background-color: @special-red-status;
+  border-radius: 50%;
+}
+
+.companion-card__name--online::after {
+  background-color: @green;
+}
+
+.companion-card__likes,
+.companion-card__call {
+  text-transform: uppercase;
+  color: @basic-blue-dark;
+}
+
+.companion-card__likes {
+  line-height: 16px;
+}
+
+// Button
+
+.companion-card__call {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 17px;
+
+  text-align: center;
+}
+
+.companion-card__button {
+  position: relative;
+  padding-left: 33px;
+
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  color: @basic-blue;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+
+    top: 11px;
+    left: 0;
+
+    width: 18px;
+    height: 2px;
+
+    background-color: @basic-blue;
+    border-radius: 2px;
+  }
+}
+
+.companion-card__button::after {
+  transform: rotate(-90deg);
+}
+
+.companion-card__pagination {
+  margin-bottom: 46px;
+}

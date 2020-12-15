@@ -5,7 +5,7 @@
   <title>Каталог: Погнали</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
-<body class="page__body">
+<body class="page__body page__body--inner">
 
 <header class="page-header">
 
@@ -91,7 +91,7 @@
         </li>
       </ul>
 
-      <div class="alphabet">
+      <div class="filtration__alphabet alphabet">
         <h2 class="visually-hidden">Выбор страны</h2>
         <ul class="alphabet__list">
           <li class="alphabet__item">
@@ -237,15 +237,24 @@
 
           <ul class="companion-choice__list">
             <li class="companion-choice__item">
-              <input class="companion-choice__checkbox" id="gym" type="checkbox" name="hobby" value="Спортзал" checked>
+              <input
+                class="visually-hidden companion-choice__checkbox" id="gym" type="checkbox" name="hobby"
+                value="Спортзал" checked
+              >
               <label class="companion-choice__label" for="gym">Спортзал</label>
             </li>
             <li class="companion-choice__item">
-              <input class="companion-choice__checkbox" id="hookah" type="checkbox" name="hobby" value="Кальян">
+              <input
+                class="visually-hidden companion-choice__checkbox" id="hookah" type="checkbox" name="hobby"
+                value="Кальян"
+              >
               <label class="companion-choice__label" for="hookah">Кальян</label>
             </li>
             <li class="companion-choice__item">
-              <input class="companion-choice__checkbox" id="sofa" type="checkbox" name="hobby" value="Диван">
+              <input
+                class="visually-hidden companion-choice__checkbox" id="sofa" type="checkbox" name="hobby"
+                value="Диван"
+              >
               <label class="companion-choice__label" for="sofa">Диван</label>
             </li>
           </ul>
@@ -257,7 +266,8 @@
           <ul class="companion-choice__list companion-choice__list--show">
             <li class="companion-choice__item">
               <input
-                class="companion-choice__checkbox" id="hard-rock" type="checkbox" name="music" value="Тяжелый рок"
+                class="visually-hidden companion-choice__checkbox" id="hard-rock" type="checkbox" name="music"
+                value="Тяжелый рок"
                 checked
               >
               <label class="companion-choice__label" for="hard-rock">Тяжелый рок</label>
@@ -265,14 +275,18 @@
 
             <li class="companion-choice__item">
               <input
-                class="companion-choice__checkbox" id="russian-rap" type="checkbox" name="music" value="Русский рэп"
+                class="visually-hidden companion-choice__checkbox" id="russian-rap" type="checkbox" name="music"
+                value="Русский рэп"
                 checked
               >
               <label class="companion-choice__label" for="russian-rap">Русский рэп</label>
             </li>
 
             <li class="companion-choice__item">
-              <input class="companion-choice__checkbox" id="euro-dance" type="checkbox" name="music" value="Евроденс">
+              <input
+                class="visually-hidden companion-choice__checkbox" id="euro-dance" type="checkbox" name="music"
+                value="Евроденс"
+              >
               <label class="companion-choice__label" for="euro-dance">Евроденс</label>
             </li>
           </ul>
@@ -284,16 +298,23 @@
           <ul class="companion-choice__list">
             <li class="companion-choice__item">
               <input
-                class="companion-choice__checkbox" id="meat-eater" type="checkbox" name="food" value="Мясоед" checked
+                class="visually-hidden companion-choice__checkbox" id="meat-eater" type="checkbox" name="food"
+                value="Мясоед" checked
               >
               <label class="companion-choice__label" for="meat-eater">Мясоед</label>
             </li>
             <li class="companion-choice__item">
-              <input class="companion-choice__checkbox" id="nutrition" type="checkbox" name="food" value="Сидит на ПП">
+              <input
+                class="visually-hidden companion-choice__checkbox" id="nutrition" type="checkbox" name="food"
+                value="Сидит на ПП"
+              >
               <label class="companion-choice__label" for="nutrition">Сидит на ПП</label>
             </li>
             <li class="companion-choice__item">
-              <input class="companion-choice__checkbox" id="vegan" type="checkbox" name="food" value="Веган-сыроед">
+              <input
+                class="visually-hidden companion-choice__checkbox" id="vegan" type="checkbox" name="food"
+                value="Веган-сыроед"
+              >
               <label class="companion-choice__label" for="vegan">Веган-сыроед</label>
             </li>
           </ul>
@@ -330,13 +351,16 @@
 
             <div class="level-filter__level-controls">
               <label class="level-filter__label" aria-label="Минимальный уровень">
-                <input class="level-filter__input" type="number" name="min" id="min-level" value="0" min="0" max="100">
+                <input
+                  class="level-filter__input level-filter__input--min" type="number" name="min" id="min-level"
+                  value="0" min="0" max="100"
+                >
               </label>
 
               <label class="level-filter__label" aria-label="Максимальный уровень">
                 <input
-                  class="level-filter__input" type="number" name="max" id="max-level" value="100" min="0"
-                  max="100"
+                  class="level-filter__input level-filter__input--max" type="number" name="max" id="max-level"
+                  value="100" min="0" max="100"
                 >
               </label>
             </div>
@@ -344,12 +368,12 @@
             <div class="level-filter__range-controls">
               <div class="level-filter__scale">
                 <div class="level-filter__bar"></div>
-                <div class="level-filter__toggle level-filter__toggle--min" tabindex="0"></div>
-                <div class="level-filter__toggle level-filter__toggle--max" tabindex="0"></div>
               </div>
+              <div class="level-filter__toggle level-filter__toggle--min" tabindex="0"></div>
+              <div class="level-filter__toggle level-filter__toggle--max" tabindex="0"></div>
             </div>
-
           </div>
+
         </fieldset>
 
         <button class="companion-choice__button button" type="submit">Показать</button>
@@ -376,22 +400,22 @@
 
           <ul class="companion-card__tags tags">
             <li class="tags__item">
-              <a class="tags__link" href="#">#ЗОЖ</a>
+              <a class="tags__link tags__link--size-s" href="#">#ЗОЖ</a>
             </li>
             <li class="tags__item">
-              <a class="tags__link" href="#">#ПП</a>
+              <a class="tags__link tags__link--size-s" href="#">#ПП</a>
             </li>
             <li class="tags__item">
-              <a class="tags__link" href="#">#Фитнес</a>
+              <a class="tags__link tags__link--size-s" href="#">#Фитнес</a>
             </li>
             <li class="tags__item">
-              <a class="tags__link" href="#">#пляж</a>
+              <a class="tags__link tags__link--size-s" href="#">#пляж</a>
             </li>
             <li class="tags__item">
-              <a class="tags__link" href="#">#авокадо</a>
+              <a class="tags__link tags__link--size-s" href="#">#авокадо</a>
             </li>
             <li class="tags__item">
-              <a class="tags__link" href="#">#смузи</a>
+              <a class="tags__link tags__link--size-s" href="#">#смузи</a>
             </li>
           </ul>
 
@@ -448,12 +472,12 @@
 
             <div class="info-card__level level">
               <p class="info-card__title">левел:</p>
-              <span class="level__number">99</span>
-              <span class="level__text">level</span>
+              <span class="level__number level__number--profile">99</span>
+              <span class="level__text visually-hidden">level</span>
             </div>
           </div>
 
-          <button class="button" type="button">Позвать!</button>
+          <button class="companion-card__call button" type="button">Позвать!</button>
         </li>
 
         <li class="companion-card__item">
@@ -468,19 +492,19 @@
 
           <ul class="companion-card__tags tags">
             <li class="tags__item">
-              <a class="tags__link" href="#">#бургер</a>
+              <a class="tags__link tags__link--size-s" href="#">#бургер</a>
             </li>
             <li class="tags__item">
-              <a class="tags__link" href="#">#бар</a>
+              <a class="tags__link tags__link--size-s" href="#">#бар</a>
             </li>
             <li class="tags__item">
-              <a class="tags__link" href="#">#футбол</a>
+              <a class="tags__link tags__link--size-s" href="#">#футбол</a>
             </li>
             <li class="tags__item">
-              <a class="tags__link" href="#">#концерт</a>
+              <a class="tags__link tags__link--size-s" href="#">#концерт</a>
             </li>
             <li class="tags__item">
-              <a class="tags__link" href="#">#крафт</a>
+              <a class="tags__link tags__link--size-s" href="#">#крафт</a>
             </li>
           </ul>
 
@@ -529,12 +553,12 @@
 
             <div class="info-card__level level">
               <p class="info-card__title">левел:</p>
-              <span class="level__number">80</span>
-              <span class="level__text">level</span>
+              <span class="level__number level__number--profile">80</span>
+              <span class="level__text visually-hidden">level</span>
             </div>
           </div>
 
-          <button class="button" type="button">Позвать!</button>
+          <button class="companion-card__call button" type="button">Позвать!</button>
         </li>
 
         <li class="companion-card__item">
@@ -549,19 +573,19 @@
 
           <ul class="companion-card__tags tags">
             <li class="tags__item">
-              <a class="tags__link" href="#">#рэп</a>
+              <a class="tags__link tags__link--size-s" href="#">#рэп</a>
             </li>
             <li class="tags__item">
-              <a class="tags__link" href="#">#тату</a>
+              <a class="tags__link tags__link--size-s" href="#">#тату</a>
             </li>
             <li class="tags__item">
-              <a class="tags__link" href="#">#хайпбист</a>
+              <a class="tags__link tags__link--size-s" href="#">#хайпбист</a>
             </li>
             <li class="tags__item">
-              <a class="tags__link" href="#">#кроссовки</a>
+              <a class="tags__link tags__link--size-s" href="#">#кроссовки</a>
             </li>
             <li class="tags__item">
-              <a class="tags__link" href="#">#суприм</a>
+              <a class="tags__link tags__link--size-s" href="#">#суприм</a>
             </li>
           </ul>
 
@@ -618,12 +642,12 @@
 
             <div class="info-card__level level">
               <p class="info-card__title">левел:</p>
-              <span class="level__number">25</span>
-              <span class="level__text">level</span>
+              <span class="level__number level__number--profile">25</span>
+              <span class="level__text visually-hidden">level</span>
             </div>
           </div>
 
-          <button class="button" type="button">Позвать!</button>
+          <button class="companion-card__call button" type="button">Позвать!</button>
         </li>
 
         <li class="companion-card__item">
@@ -633,21 +657,21 @@
             alt="фотография попутчика"
           >
 
-          <p class="companion-card__name">Лариса Роговая</p>
+          <p class="companion-card__name companion-card__name--online">Лариса Роговая</p>
           <p class="companion-card__likes">23</p>
 
           <ul class="companion-card__tags tags">
             <li class="tags__item">
-              <a class="tags__link" href="#">#образование</a>
+              <a class="tags__link tags__link--size-s" href="#">#образование</a>
             </li>
             <li class="tags__item">
-              <a class="tags__link" href="#">#карьера</a>
+              <a class="tags__link tags__link--size-s" href="#">#карьера</a>
             </li>
             <li class="tags__item">
-              <a class="tags__link" href="#">#учеба</a>
+              <a class="tags__link tags__link--size-s" href="#">#учеба</a>
             </li>
             <li class="tags__item">
-              <a class="tags__link" href="#">#линкедин</a>
+              <a class="tags__link tags__link--size-s" href="#">#линкедин</a>
             </li>
           </ul>
 
@@ -696,12 +720,12 @@
 
             <div class="info-card__level level">
               <p class="info-card__title">левел:</p>
-              <span class="level__number">50</span>
-              <span class="level__text">level</span>
+              <span class="level__number level__number--profile">50</span>
+              <span class="level__text visually-hidden">level</span>
             </div>
           </div>
 
-          <button class="button" type="button">Позвать!</button>
+          <button class="companion-card__call button" type="button">Позвать!</button>
         </li>
       </ul>
 
