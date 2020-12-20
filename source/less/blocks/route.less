@@ -2,6 +2,18 @@
   background-color: @basic-yellow;
 }
 
+.route__wrapper {
+  .wrapper-mobile();
+
+  @media (min-width: @tablet-width) {
+    .wrapper-tablet();
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper-desktop();
+  }
+}
+
 .route__address {
   font-weight: bold;
   font-size: 16px;

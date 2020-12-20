@@ -1,5 +1,9 @@
 .tags {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
 }
 
 .tags__item:not(:last-child) {
@@ -11,6 +15,11 @@
   line-height: 112%;
 
   color: @special-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 23px;
+  }
 }
 
 .tags__link--size-s {

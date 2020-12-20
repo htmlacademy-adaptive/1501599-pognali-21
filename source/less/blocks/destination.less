@@ -2,6 +2,22 @@
   background-color: @basic-blue-light;
 }
 
+.destination__wrapper {
+  .wrapper-mobile();
+
+  @media (min-width: @tablet-width) {
+    .wrapper-tablet();
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper-desktop();
+    display: grid;
+    column-gap: 60px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+}
+
 .destination__title {
   .section-title();
 }
@@ -9,4 +25,24 @@
 .destination__desc {
   .section-text();
   margin-bottom: 60px;
+
+  @media (min-width: @tablet-width) {
+    width: 378px;
+  }
+}
+
+.destination__list {
+  @media (min-width: @desktop-width) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+}
+
+.destination__button {
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
 }

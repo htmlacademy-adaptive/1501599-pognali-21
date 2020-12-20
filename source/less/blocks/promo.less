@@ -1,3 +1,16 @@
+.promo__wrapper {
+  position: relative;
+  .wrapper-mobile();
+
+  @media (min-width: @tablet-width) {
+    .wrapper-tablet();
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper-desktop();
+  }
+}
+
 .promo {
   background-color: @basic-blue-dark;
 }
@@ -14,8 +27,38 @@
   line-height: 111%;
 
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+  }
 }
 
 .promo__quote {
   margin-bottom: 30px;
+}
+
+.quote__text {
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+  }
+}
+
+.quote__author {
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
+}
+
+.promo__user {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    position: absolute;
+
+    top: -40px;
+    right: 0;
+  }
 }
