@@ -4,11 +4,32 @@
   font-weight: 500;
   font-size: 30px;
   line-height: 117%;
-
+  text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 144px;
+
+    font-size: 60px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 628px;
+
+    margin-bottom: 0;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .site-list__link {
-  text-align: center;
   color: @special-blue-accent;
+
+  @media (min-width: @desktop-width) {
+    color: @white;
+  }
 }

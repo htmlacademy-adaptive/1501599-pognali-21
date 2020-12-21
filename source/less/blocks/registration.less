@@ -2,17 +2,82 @@
   background-color: @special-blue-accent;
 }
 
+.registration__wrapper {
+  .wrapper-mobile();
+
+  @media (min-width: @tablet-width) {
+    .wrapper-tablet();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper-desktop();
+  }
+}
+
 .registration__title {
   .section-title();
+  text-align: center;
 }
 
 .registration__desc,
 .registration__legend {
   .section-text();
   color: @white;
+  text-align: center;
 }
 
 .registration__link {
   color: @basic-yellow;
   border-bottom: 1px solid @basic-yellow;
+}
+
+.registration__form {
+  position: relative;
+}
+
+.registration__input {
+  padding: 22px 0 19px 25px;
+
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+
+  border: none;
+  border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    width: 536px;
+    border-radius: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 850px;
+  }
+}
+
+.registration__button {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 60px;
+  height: 62px;
+
+  background-color: @basic-yellow;
+
+  @media (min-width: @tablet-width) {
+    right: 0;
+    border-radius: 0 20px 20px 0;
+  }
+}
+
+.registration__contacts {
+  @media (min-width: @desktop-width) {
+    align-self: start;
+    display: flex;
+  }
 }

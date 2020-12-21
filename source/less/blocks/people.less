@@ -7,6 +7,10 @@
 }
 
 .people__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   padding: 17px 17px 20px 17px;
 
   margin-bottom: 10px;
@@ -19,4 +23,9 @@
   line-height: 21px;
 
   color: @basic-blue;
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 22px;
+  }
 }

@@ -1,4 +1,22 @@
+// Wrap
+
+.wrapper-mobile() {
+  width: 270px;
+  margin: 0 auto;
+}
+
+.wrapper-tablet() {
+  width: 688px;
+  margin: 0 auto;
+}
+
+.wrapper-desktop() {
+  width: 1320px;
+  margin: 0 auto;
+}
+
 // Text
+
 .section-title() {
   margin-bottom: 19px;
 
@@ -6,16 +24,31 @@
   font-size: 24px;
   line-height: 100%;
   color: @special-orange;
+
+  @media (min-width: @tablet-width) {
+    font-size: 45px;
+    line-height: 45px;
+  }
 }
 
 .section-text() {
   font-size: 16px;
   line-height: 137%;
+
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 33px;
+  }
 }
 
 .section-text--accent() {
   font-style: normal;
   font-weight: bold;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    line-height: 25px;
+  }
 }
 
 // Plans

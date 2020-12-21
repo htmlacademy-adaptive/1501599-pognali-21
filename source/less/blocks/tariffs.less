@@ -7,16 +7,45 @@
   background-color: @special-blue-dark;
 }
 
+.tariffs__wrapper {
+  .wrapper-mobile();
+
+  @media (min-width: @tablet-width) {
+    .wrapper-tablet();
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper-desktop();
+  }
+}
+
 .tariffs__title {
   .section-title();
+  text-align: center;
 }
 
 .tariffs__number {
   font-weight: normal;
   background-color: @special-orange;
+  color: @white;
+
+  @media (min-width: @tablet-width) {
+    order: -1;
+  }
+}
+
+.tariffs__item {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 28px;
+    line-height: 28px;
+  }
 }
 
 .tariffs__button {
+  font-family: @main-font;
   font-weight: bold;
   font-size: 16px;
   line-height: 16px;
@@ -24,4 +53,9 @@
 
   border: none;
   background-color: transparent;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

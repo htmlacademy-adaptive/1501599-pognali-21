@@ -1,15 +1,126 @@
+.instruction {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 .instruction__item {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: -50px;
+  padding: 22px 21px 75px 24px;
+
   font-weight: bold;
   font-size: 18px;
   line-height: 100%;
 
   background-color: @special-orange;
+  border-radius: 15px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+
+    margin-top: 0;
+    padding: 31px 100px 21px 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1320px;
+    padding: 30px 50px 30px 34px;
+  }
 }
 
+// Decor
+
+.instruction__item:nth-child(2) {
+  background-color: @special-orange-light;
+}
+
+.instruction__item:nth-child(3) {
+  background-color: @special-yellow-dark;
+}
+
+.instruction__item:last-child {
+  background-color: @basic-yellow;
+
+  @media (max-width: @mobile-width-only) {
+    padding-bottom: 24px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 21px;
+  }
+}
+
+// Decor mobile
+
+.instruction__item:first-child {
+  @media (max-width: @mobile-width-only) {
+    margin-top: 0;
+  }
+}
+
+// Decor tablet
+
+.instruction__item:first-child,
+.instruction__item:nth-child(2) {
+  @media (min-width: @tablet-width) {
+    border-radius: 15px 15px 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-radius: 25px;
+  }
+}
+
+.instruction__item:last-child,
+.instruction__item:nth-child(3) {
+  @media (min-width: @tablet-width) {
+    border-radius: 0 0 15px 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-radius: 25px;
+  }
+}
+
+
+// Text
+
 .instruction__desc {
+  width: 140px;
   color: @basic-blue-dark;
+
+  @media (min-width: @tablet-width) {
+    width: 185px;
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 
 .instruction__step {
   color: @white;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+    line-height: 24px;
+  }
 }

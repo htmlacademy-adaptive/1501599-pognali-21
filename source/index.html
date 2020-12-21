@@ -4,64 +4,62 @@
   <meta charset="utf-8">
   <title>HTML Academy: Погнали</title>
   <link rel="stylesheet" href="./css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body class="page__body">
 
 <header class="page-header">
+  <div class="page-header__wrapper">
+    <a class="page-header__logo logo">
+      <img
+        class="logo__img" src="https://via.placeholder.com/96x15" width="96" height="15"
+        alt="логотип сервиса для поиска попутчиков &laquo;Погнали?&raquo;"
+      >
+    </a>
 
-  <a class="page-header__logo logo">
-    <img
-      class="logo__img" src="https://via.placeholder.com/96x15" width="96" height="15"
-      alt="логотип сервиса для поиска попутчиков &laquo;Погнали?&raquo;"
-    >
-  </a>
+    <nav class="main-nav">
 
-  <nav class="main-nav">
-    <button class="main-nav__toggle" type="button">
-      <span class="visually-hidden">Открыть меню</span>
-    </button>
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
 
-    <ul class="site-list">
-      <li class="site-list__item">
-        <a class="site-list__link site-list__link--active">О сервисе</a>
-      </li>
-      <li class="site-list__item">
-        <a class="site-list__link" href="form.html">Направления</a>
-      </li>
-      <li class="site-list__item">
-        <a class="site-list__link" href="catalog.html">Попутчики</a>
-      </li>
-    </ul>
+      <ul class="site-list">
+        <li class="site-list__item">
+          <a class="site-list__link site-list__link--active">О сервисе</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="form.html">Направления</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="catalog.html">Попутчики</a>
+        </li>
+      </ul>
 
-    <div class="user-list">
-      <a class="user-list__call user-list__call--hidden" href="#" aria-label="Обратный звонок">Call</a>
-      <a class="user-list__email user-list__email--hidden" href="#" aria-label="Написать письмо">Email</a>
-      <a class="user-list__authorization button" href="#">Авторизация</a>
-    </div>
+      <a class="main-nav__authorization button" href="#">Авторизация</a>
 
-    <ul class="contacts-list">
-      <li class="contacts-list__item">
-        <a class="contacts-list__link phone" href="tel:88005558628">8 800 555-86-28</a>
-      </li>
-      <li class="contacts-list__item">
-        <a class="contacts-list__link email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-      </li>
-    </ul>
+      <ul class="main-nav__contacts contacts-list">
+        <li class="contacts-list__item">
+          <a class="contacts-list__link phone" href="tel:88005558628">8 800 555-86-28</a>
+        </li>
+        <li class="contacts-list__item">
+          <a class="contacts-list__link email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </li>
+      </ul>
 
-    <ul class="social-list">
-      <li class="social-list__item">
-        <a class="social-list__link facebook" aria-label="Facebook"></a>
-      </li>
-      <li class="social-list__item">
-        <a class="social-list__link vkontakte" aria-label="VKontakte"></a>
-      </li>
-      <li class="social-list__item">
-        <a class="social-list__link instagram" aria-label="Instagram"></a>
-      </li>
-    </ul>
+      <ul class="main-nav__social social-list">
+        <li class="social-list__item">
+          <a class="social-list__link facebook" aria-label="Facebook"></a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link vkontakte" aria-label="VKontakte"></a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link instagram" aria-label="Instagram"></a>
+        </li>
+      </ul>
 
-  </nav>
-
+    </nav>
+  </div>
 </header>
 
 <main class="page-main">
@@ -75,9 +73,9 @@
       <p class="promo__slogan">В путешествие<br> с крутыми<br>
         попутчиками!</p>
 
-      <div class="user-list">
-        <a class="user-list__call" href="#" aria-label="Обратный звонок">Call</a>
-        <a class="user-list__email" href="#" aria-label="Написать письмо">Email</a>
+      <div class="promo__user user-list">
+        <a class="user-list__contact user-list__contact--call" href="#" aria-label="Обратный звонок"></a>
+        <a class="user-list__contact user-list__contact--email" href="#" aria-label="Написать письмо"></a>
         <a class="user-list__authorization button" href="#">Авторизация</a>
       </div>
 
@@ -99,7 +97,7 @@
         </li>
 
         <li class="instruction__item">
-          <p class="instruction__desc">Находите тех, кто похож на вас</p>
+          <p class="instruction__desc">Находите тех, кто похож на&nbsp;вас</p>
           <span class="instruction__step">3</span>
         </li>
 
@@ -128,12 +126,15 @@
 
   <section class="destination">
     <div class="destination__wrapper">
+
       <h2 class="destination__title">Направления</h2>
       <p class="destination__desc">Мы не&nbsp;продаем туры и&nbsp;ничего не&nbsp;рекламируем. Люди сами пишут о&nbsp;странах,
         куда хотели&nbsp;бы
         отправиться и&nbsp;чем можно там&nbsp;заняться.
       </p>
-      <ul class="country-list">
+
+
+      <ul class="destination__list country-list">
 
         <li class="country-list__item">
           <img
@@ -186,7 +187,7 @@
       <p class="companions__desc companions__desc--bold">Теперь можно легко найти
         единомышленников!</p>
 
-      <ul class="people">
+      <ul class="companions__people people">
         <li class="people__item">
           <div class="people__level level">
             <span class="level__number">99</span>
@@ -339,7 +340,7 @@
       <p class="registration__legend">Остались вопросы?
         Мы с&nbsp;радостью на&nbsp;них ответим!</p>
 
-      <ul class="contacts-list">
+      <ul class="registration__contacts contacts-list">
         <li class="contacts-list__item">
           <a class="contacts-list__link phone" href="tel:88005558628">
             <span class="contacts-list__info contacts-list__info--color-yellow">8 800 555-86-28</span>
@@ -356,39 +357,43 @@
   </section>
 
   <section class="route">
-    <h2 class="visually-hidden">Как до нас добраться</h2>
-    <p class="route__address">ул. Большая Конюшенная, 19/8</p>
-    <a class="route__button button" href="#">Проложить маршрут</a>
-    <!--Тут будет карта-->
+    <div class="route__wrapper">
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <p class="route__address">ул. Большая Конюшенная, 19/8</p>
+      <a class="route__button button" href="#">Проложить маршрут</a>
+      <!--Тут будет карта-->
+    </div>
   </section>
 
 </main>
 
 <footer class="page-footer">
-  <a class="page-footer__logo logo">
-    <img
-      class="logo__img logo__img--dark" src="https://via.placeholder.com/96x15" width="96" height="15"
-      alt="логотип сервиса для поиска попутчиков &laquo;Погнали?&raquo;"
-    >
-  </a>
+  <div class="page-footer__wrapper">
+    <a class="page-footer__logo logo">
+      <img
+        class="logo__img logo__img--dark" src="https://via.placeholder.com/96x15" width="96" height="15"
+        alt="логотип сервиса для поиска попутчиков &laquo;Погнали?&raquo;"
+      >
+    </a>
 
-  <ul class="social-list">
-    <li class="social-list__item">
-      <a class="social-list__link social-list__link--background facebook" aria-label="Facebook"></a>
-    </li>
-    <li class="social-list__item">
-      <a class="social-list__link social-list__link--background vkontakte" aria-label="VKontakte"></a>
-    </li>
-    <li class="social-list__item">
-      <a class="social-list__link social-list__link--background instagram" aria-label="Instagram"></a>
-    </li>
-  </ul>
+    <ul class="social-list">
+      <li class="social-list__item">
+        <a class="social-list__link social-list__link--background facebook" aria-label="Facebook"></a>
+      </li>
+      <li class="social-list__item">
+        <a class="social-list__link social-list__link--background vkontakte" aria-label="VKontakte"></a>
+      </li>
+      <li class="social-list__item">
+        <a class="social-list__link social-list__link--background instagram" aria-label="Instagram"></a>
+      </li>
+    </ul>
 
-  <a
-    class="page-footer__copyright"
-    href="https://htmlacademy.ru/intensive/adaptive"
-    aria-label="логотип HTML Academy">Разработано
-  </a>
+    <a
+      class="page-footer__copyright"
+      href="https://htmlacademy.ru/intensive/adaptive"
+      aria-label="логотип HTML Academy">Разработано
+    </a>
+  </div>
 </footer>
 
 <section class="modal modal-tariffs">

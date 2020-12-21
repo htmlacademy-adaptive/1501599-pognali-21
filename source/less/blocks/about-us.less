@@ -1,3 +1,15 @@
+.about-us__wrapper {
+  .wrapper-mobile();
+
+  @media (min-width: @tablet-width) {
+    .wrapper-tablet();
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper-desktop();
+  }
+}
+
 .about-us {
   background-color: @special-blue-accent;
 }
@@ -8,10 +20,19 @@
 
 .about-us__desc {
   .section-text();
-  margin-bottom: 20px;
   color: @white;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .about-us__desc--bold {
   .section-text--accent();
+}
+
+.about-us__button {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
 }
