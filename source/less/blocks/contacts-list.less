@@ -1,5 +1,9 @@
 .contacts-list__item {
   height: 45px;
+
+  @media (min-width: @tablet-width) {
+    height: 68px;
+  }
 }
 
 .contacts-list__link {
@@ -29,6 +33,17 @@
 
     background-color: @basic-blue-dark-icon;
     border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      width: 68px;
+      height: 68px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 14px 0 0 91px;
+    font-size: 28px;
+    line-height: 28px;
   }
 }
 
