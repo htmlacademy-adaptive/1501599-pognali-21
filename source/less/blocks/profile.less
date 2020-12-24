@@ -1,4 +1,103 @@
+.profile {
+  padding: 20px 0 34px;
+
+  @media (min-width: @tablet-width) {
+    padding: 66px 0 48px;
+  }
+}
+
+.profile__wrapper {
+  .wrapper-mobile();
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, auto);
+
+  @media (min-width: @tablet-width) {
+    .wrapper-tablet();
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper-desktop();
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+  }
+}
+
 .profile__button-change {
+  @media (min-width: @tablet-width) {
+    letter-spacing: 0.09em;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.profile__button-photo {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.profile__button-change,
+.profile__tags,
+.profile__transport {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.profile__transport {
+  @media (min-width: @tablet-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}
+
+.profile__button-change,
+.profile__tags {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.profile__tags {
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}
+
+.profile__level {
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+}
+
+.profile__photo {
+  @media (min-width: @desktop-width) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+}
+
+.profile__button-change,
+.profile__button-photo {
+  font-weight: 500;
   text-align: center;
   text-transform: uppercase;
   color: @basic-blue-dark;
@@ -15,6 +114,28 @@
   color: @basic-blue;
 
   background-color: @basic-grey;
+
+  @media (min-width: @tablet-width) {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+
+    letter-spacing: 0.08em;
+  }
+
+  @media (min-width: @desktop-width) {
+    letter-spacing: 0.09em;
+  }
+}
+
+.profile__title--tags {
+  @media (min-width: @tablet-width) {
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: @desktop-width) {
+    letter-spacing: 0.07em;
+  }
 }
 
 .profile__textarea,

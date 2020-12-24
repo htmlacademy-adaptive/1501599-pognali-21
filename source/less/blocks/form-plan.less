@@ -17,7 +17,6 @@
 
 // Form
 
-
 .form-plan__title,
 .form-plan__label,
 .form-plan__input,
@@ -34,6 +33,14 @@
   border-radius: 10px;
 
   border: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 48px 40px 54px 43px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 100px 160px 104px;
+  }
 }
 
 .form-plan__title {
@@ -41,10 +48,52 @@
   font-size: 20px;
   line-height: 20px;
   border-width: inherit;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .form-plan__desc {
   .section-text();
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.form-plan__stay {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: 60px;
+  }
+}
+
+.form-plan__stay-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.form-plan__stay-item--time {
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}
+
+.form-plan__stay-item--children {
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
 }
 
 .form-plan__label,
@@ -52,18 +101,33 @@
 .form-plan__input {
   font-weight: 500;
   font-size: 16px;
-  line-height: 100%;
 
   text-transform: uppercase;
 }
 
 .form-plan__label {
   letter-spacing: 0.09em;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    letter-spacing: 0.1em;
+  }
 }
 
 .form-plan__unit {
   letter-spacing: 0.07em;
   color: @basic-blue-opacity-30;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    letter-spacing: 0.08em;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 3;
+
+    color: @basic-blue;
+  }
 }
 
 .form-plan__input,
@@ -74,8 +138,14 @@
 
 .form-plan__input {
   padding: 16px 14px 13px 14px;
+  width: 100%;
 
+  text-align: center;
   font-size: 14px;
+
+  @media (min-width: @desktop-width) {
+    width: 180px;
+  }
 }
 
 .form-plan__children {
@@ -84,6 +154,14 @@
 
   padding-left: 39px;
   font-size: 15px;
+
+  @media (min-width: @tablet-width) {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
 }
 
 .form-plan__input-children + .form-plan__children::before {

@@ -6,20 +6,94 @@
   .border-radius();
 }
 
+.plans__wrapper {
+  .wrapper-mobile();
+
+  @media (min-width: @tablet-width) {
+    .wrapper-tablet();
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper-desktop();
+  }
+}
+
+.plans__list {
+  list-style: none;
+}
+
 .plans__title {
   .section-title();
   color: @basic-blue;
 }
 
 .plans__item {
-  padding: 24px;
+  position: relative;
 
   background-color: @white;
   border-radius: 10px;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 37px 42px 38px 43px;
+  }
 }
 
 .plans__item:not(:last-child) {
   margin-bottom: 10px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 15px;
+  }
+}
+
+.plans__location {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 23px 24px 0 24px;
+
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+
+    margin-bottom: 0;
+    padding: 40px 32px 34px 40px;
+
+    border-bottom: 1px solid @basic-grey-border-opacity-30;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    border-bottom: none;
+  }
+}
+
+.plans__info {
+  padding: 0 25px 23px 25px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 40px 14px 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
+.plans__number {
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 0;
+  }
 }
 
 .plans__number,
@@ -28,16 +102,15 @@
   line-height: 100%;
 }
 
-.plans__number,
-.plans__companions,
-.plans__date,
-.plans__button {
-  font-weight: 500;
-}
-
 .plans__country {
-  margin-bottom: 20px;
+  margin-left: 5px;
   font-weight: bold;
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+    margin-left: 0;
+  }
 }
 
 .plans__companions,
@@ -49,6 +122,18 @@
   text-transform: uppercase;
 }
 
+.plans__number,
+.plans__companions,
+.plans__date,
+.plans__button {
+  font-weight: 500;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
 .plans__companions,
 .plans__date {
   letter-spacing: 0.06em;
@@ -56,14 +141,28 @@
 
 .plans__companions {
   margin-bottom: 5px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .plans__date {
   margin-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .plans__button {
+  padding: 0;
+
+  font-family: @main-font;
+  font-weight: 500;
   letter-spacing: 0.03em;
   color: @black-opacity-30;
+
   background-color: transparent;
+  border: none;
 }
