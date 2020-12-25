@@ -15,6 +15,16 @@
   margin: 0 auto;
 }
 
+// Background border
+
+.background__border() {
+  border-radius: 0 0 30px 30px;
+
+  @media (min-width: @tablet-width) {
+    border-radius: 0 0 60px 60px;
+  }
+}
+
 // Text
 
 .section-title() {
@@ -26,6 +36,11 @@
   color: @special-orange;
 
   @media (min-width: @tablet-width) {
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
     font-size: 45px;
     line-height: 45px;
   }

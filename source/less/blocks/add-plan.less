@@ -5,6 +5,18 @@
   .border-radius();
 }
 
+.add-plan__wrapper {
+  .wrapper-mobile();
+
+  @media (min-width: @tablet-width) {
+    .wrapper-tablet();
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper-desktop();
+  }
+}
+
 .add-plan__title {
   .section-title();
   color: @basic-blue;

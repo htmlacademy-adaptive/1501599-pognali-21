@@ -1,5 +1,15 @@
 .route {
+  padding: 63px 0 35px 0;
   background-color: @basic-yellow;
+  .background__border();
+
+  @media (min-width: @tablet-width) {
+    padding: 102px 0 84px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 116px 0 56px 0;
+  }
 }
 
 .route__wrapper {
@@ -14,14 +24,41 @@
   }
 }
 
+.route__desc {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 .route__address {
+  margin-bottom: 33px;
+
   font-weight: bold;
   font-size: 16px;
   line-height: 137%;
   text-transform: uppercase;
   color: @basic-blue;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 44px;
+
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .route__button {
   background-color: transparent;
+  border: 3px solid @special-blue-accent;
+  border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    border-radius: 20px;
+  }
 }

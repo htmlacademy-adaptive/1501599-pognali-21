@@ -1,5 +1,16 @@
 .registration {
+  padding: 105px 0 30px 0;
+
   background-color: @special-blue-accent;
+  .background__border();
+
+  @media (min-width: @tablet-width) {
+    padding: 133px 0 60px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 208px 0 104px 0;
+  }
 }
 
 .registration__wrapper {
@@ -20,6 +31,16 @@
 .registration__title {
   .section-title();
   text-align: center;
+  margin-bottom: 19px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 59px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper-desktop();
+    margin-bottom: 57px;
+  }
 }
 
 .registration__desc,
@@ -29,28 +50,54 @@
   text-align: center;
 }
 
+.registration__desc {
+  margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 655px;
+    margin-bottom: 60px;
+  }
+}
+
 .registration__link {
   color: @basic-yellow;
   border-bottom: 1px solid @basic-yellow;
 }
 
 .registration__form {
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
+  margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 70px;
+  }
 }
 
 .registration__input {
   padding: 22px 0 19px 25px;
+
+  width: 220px;
 
   font-weight: bold;
   font-size: 18px;
   line-height: 18px;
 
   border: none;
-  border-radius: 10px;
+  border-radius: 10px 0 0 10px;
 
   @media (min-width: @tablet-width) {
     width: 536px;
-    border-radius: 20px;
+    border-radius: 20px 0 0 20px;
   }
 
   @media (min-width: @desktop-width) {
@@ -59,25 +106,45 @@
 }
 
 .registration__button {
-  position: absolute;
-
-  top: 0;
-  right: 0;
-
-  width: 60px;
-  height: 62px;
-
-  background-color: @basic-yellow;
+  @media (max-width: @mobile-width-only) {
+    width: 60px;
+    margin-left: -10px;
+  }
 
   @media (min-width: @tablet-width) {
-    right: 0;
     border-radius: 0 20px 20px 0;
   }
 }
 
-.registration__contacts {
+.registration__text-button {
+  display: none;
+
   @media (min-width: @desktop-width) {
+    display: inline;
+  }
+}
+
+.registration__legend {
+  margin-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 42px;
+  }
+}
+
+.registration__contacts {
+  @media (min-width: @tablet-width) {
     align-self: start;
+  }
+
+  @media (min-width: @desktop-width) {
     display: flex;
+    justify-content: space-between;
+    align-self: center;
+    width: 880px;
   }
 }

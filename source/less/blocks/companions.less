@@ -1,5 +1,15 @@
 .companions {
+  padding: 100px 0 31px 0;
   background-color: @special-blue-accent;
+  .background__border();
+
+  @media (min-width: @tablet-width) {
+    padding: 200px 0 87px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 220px 0 134px 0;
+  }
 }
 
 .companions__wrapper {
@@ -46,15 +56,21 @@
 }
 
 .companions__people {
+  margin-bottom: 20px;
+
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    margin-bottom: 81px;
   }
 
   @media (min-width: @desktop-width) {
     grid-row-start: 1;
     grid-row-end: 5;
+
+    margin-bottom: 0;
   }
 }
 

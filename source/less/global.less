@@ -33,4 +33,16 @@ ul {
   line-height: 100%;
 
   color: @white;
+
+  .wrapper-mobile();
+
+  @media (min-width: @tablet-width) {
+    .wrapper-tablet();
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper-desktop();
+  }
 }

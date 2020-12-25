@@ -1,8 +1,15 @@
+.about-us {
+  background-color: @special-blue-accent;
+  .background__border();
+}
+
 .about-us__wrapper {
   .wrapper-mobile();
+  padding: 100px 0 62px 0;
 
   @media (min-width: @tablet-width) {
     .wrapper-tablet();
+    padding: 150px 0 89px 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -10,8 +17,17 @@
   }
 }
 
-.about-us {
-  background-color: @special-blue-accent;
+.about-us__container {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 323px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 620px;
+  }
 }
 
 .about-us__title {
@@ -20,11 +36,8 @@
 
 .about-us__desc {
   .section-text();
+  margin-bottom: 20px;
   color: @white;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 20px;
-  }
 }
 
 .about-us__desc--bold {
