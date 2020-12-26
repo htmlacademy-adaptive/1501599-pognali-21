@@ -1,3 +1,14 @@
+.alphabet__container {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
 .alphabet__list {
   display: grid;
   grid-template-columns: repeat(5, auto);
@@ -23,6 +34,19 @@
 
   background-color: @white;
   border: 1px solid @basic-grey-border;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 10px 15px;
+
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 60px;
+    color: @special-blue-accent-opacity-30;
+
+    background-color: transparent;
+    border: none;
+  }
 }
 
 .alphabet__link--selected {
@@ -30,6 +54,13 @@
 
   background-color: @basic-blue;
   border: 1px solid @basic-blue;
+
+  @media (min-width: @tablet-width) {
+    color: @special-blue-accent;
+
+    background-color: transparent;
+    border: none;
+  }
 }
 
 .alphabet__countries-list--current {
@@ -43,19 +74,29 @@
   color: @special-grey;
 }
 
-.alphabet__button {
-  width: 100%;
+.alphabet__table-row {
+  display: flex;
+  justify-content: space-between;
+  width: 1320px;
+  margin-bottom: 50px;
+}
 
-  padding: 12px 0 10px 0;
+.alphabet__letter {
+  margin-bottom: 31px;
 
-  font-size: 16px;
-  line-height: 20px;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 60px;
 
-  letter-spacing: 0.05em;
   text-transform: uppercase;
 
   color: @special-blue-accent;
+}
 
-  background-color: @basic-blue-darken;
-  border-radius: 20px;
+.alphabet__letter-link {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+
+  color: @special-grey;
 }

@@ -1,5 +1,7 @@
 .companion-choice {
   margin-bottom: 28px;
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 
 .companion-choice__form {
@@ -19,6 +21,28 @@
 
 .companion-choice__filter {
   padding-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.companion-choice__list {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .companion-choice__title {
@@ -28,6 +52,11 @@
   line-height: 22px;
 
   letter-spacing: 0.02em;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 
 .companion-choice__item:not(:last-child) {
@@ -35,8 +64,6 @@
 }
 
 .companion-choice__reversal {
-  width: 100%;
-
   margin-bottom: 16px;
   padding: 12px 0 0 0;
 
@@ -48,7 +75,16 @@
   text-transform: uppercase;
 
   background-color: transparent;
-  border-top: 1px solid @basic-yellow-border;
+
+  @media (min-width: @tablet-width) {
+    width: 105px;
+    margin-bottom: 0;
+    padding: 0;
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .companion-choice__label {
@@ -61,6 +97,11 @@
   font-size: 15px;
   line-height: 20px;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .companion-choice__checkbox + .companion-choice__label::before {
