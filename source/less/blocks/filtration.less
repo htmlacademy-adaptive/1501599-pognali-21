@@ -3,8 +3,73 @@
   background-color: @basic-blue-background;
 }
 
+.filtration__wrapper {
+  .wrapper-mobile();
+
+  @media (min-width: @tablet-width) {
+    .wrapper-tablet();
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper-desktop();
+    grid-template-columns: 320px 1fr;
+    grid-column-gap: 30px;
+  }
+}
+
 .filtration__list {
   margin-bottom: 20px;
+  font-size: 0;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: -1;
+  }
+}
+
+.filtration__alphabet {
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+}
+
+.filtration__table-alphabet {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.filtration__toggle {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.filtration__text-toggle {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
 }
 
 .filtration__title,
@@ -22,4 +87,41 @@
 .filtration__title,
 .filtration__link--current {
   color: @special-blue-accent;
+}
+
+.filtration__title {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
+
+.filtration__button {
+  width: 100%;
+
+  padding: 12px 0 10px 0;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  color: @special-blue-accent;
+
+  background-color: @basic-blue-darken;
+  border-radius: 20px;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
 }

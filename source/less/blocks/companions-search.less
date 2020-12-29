@@ -1,0 +1,25 @@
+.companions-search {
+  .wrapper-mobile();
+
+  @media (min-width: @tablet-width) {
+    .wrapper-tablet();
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper-desktop();
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-column-gap: 60px;
+  }
+}
+
+.companions-search__choice {
+  margin-bottom: 28px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.companions-search__card {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
