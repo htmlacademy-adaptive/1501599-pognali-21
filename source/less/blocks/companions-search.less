@@ -1,14 +1,4 @@
-.page-main__wrapper {
-  padding: 12px 0;
-  background-color: @special-blue-accent-background;
-  .background__border();
-
-  @media (min-width: @tablet-width) {
-    padding: 66px 0;
-  }
-}
-
-.page-main__companions-wrapper {
+.companions-search {
   .wrapper-mobile();
 
   @media (min-width: @tablet-width) {
@@ -21,4 +11,15 @@
     grid-template-columns: 3fr 1fr;
     grid-column-gap: 60px;
   }
+}
+
+.companions-search__choice {
+  margin-bottom: 28px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.companions-search__card {
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
