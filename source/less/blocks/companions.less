@@ -1,22 +1,52 @@
 .companions {
+  position: relative;
+  margin-top: -30px;
   padding: 100px 0 31px 0;
+
   background-color: @special-blue-accent;
   .background__border();
 
+  z-index: 4;
+
   @media (min-width: @tablet-width) {
-    padding: 200px 0 87px 0;
+    .margin-top-tablet();
+    padding: 218px 0 87px 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 220px 0 134px 0;
+    padding: 205px 0 134px 0;
   }
 }
 
 .companions__wrapper {
+  position: relative;
   .wrapper-mobile();
 
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: -35px;
+    left: -25px;
+
+    width: 113px;
+    height: 132px;
+
+    background-color: @basic-blue-background;
+    border-radius: 20px;
+    z-index: -1;
+
+    @media (min-width: @desktop-width) {
+      top: -60px;
+      left: 0;
+
+      width: 212px;
+      height: 212px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
-    .wrapper-tablet();
+    .wrapper-tablet--min();
   }
 
   @media (min-width: @desktop-width) {
@@ -30,18 +60,38 @@
 
 .companions__title {
   .section-title();
+  .margin-left-mobile();
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 55px;
+    margin-left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    .margin-left-desktop();
+  }
 }
 
 .companions__desc {
   .section-text();
-  margin-bottom: 25px;
+  .margin-left-mobile();
+  width: 217px;
+  margin-bottom: 20px;
   color: @white;
+
+  @media (min-width: @tablet-width) {
+    width: 427px;
+    margin-bottom: 40px;
+    margin-left: 0;
+  }
 
   @media (min-width: @desktop-width) {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
+
+    .margin-left-desktop();
   }
 }
 
@@ -49,9 +99,23 @@
   .section-text--accent();
   margin-bottom: 55px;
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 59px;
+  }
+
   @media (min-width: @desktop-width) {
     grid-row-start: 3;
     grid-row-end: 4;
+
+    margin-bottom: 85px;
+  }
+}
+
+.companions__wrap {
+  .wrap();
+
+  @media (min-width: @desktop-width) {
+    display: inline;
   }
 }
 
@@ -63,7 +127,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
-    margin-bottom: 81px;
+    margin-bottom: 126px;
   }
 
   @media (min-width: @desktop-width) {
@@ -75,8 +139,18 @@
 }
 
 .companions__button {
+  @media (min-width: @tablet-width) {
+    padding-top: 28px;
+    padding-left: 30px;
+  }
+
   @media (min-width: @desktop-width) {
     grid-row-start: 4;
     grid-row-end: 5;
+
+    width: 280px;
+
+    .margin-left-desktop();
+    padding-left: 35px;
   }
 }

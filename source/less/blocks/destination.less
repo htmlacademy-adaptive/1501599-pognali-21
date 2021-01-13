@@ -1,14 +1,19 @@
 .destination {
-  padding: 80px 0 34px 0;
+  position: relative;
+  margin-top: -20px;
+  padding: 90px 0 34px 0;
   background-color: @basic-blue-light;
   .background__border();
 
+  z-index: 5;
+
   @media (min-width: @tablet-width) {
+    .margin-top-tablet();
     padding: 149px 0 80px 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 176px 0 87px 0;
+    padding: 235px 0 103px 0;
   }
 }
 
@@ -30,40 +35,90 @@
 
 .destination__title {
   .section-title();
+  .margin-left-mobile();
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 57px;
+    .margin-left-tablet();
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 2px 0 0 111px;
+  }
 }
 
 .destination__desc {
   .section-text();
+  .margin-left-mobile();
   margin-bottom: 60px;
+  width: 211px;
 
   @media (min-width: @tablet-width) {
     width: 378px;
-    margin-bottom: 57px;
+    margin-bottom: 104px;
+    .margin-left-tablet();
   }
 
   @media (min-width: @desktop-width) {
+    margin-left: 111px;
     margin-bottom: 0;
   }
 }
 
 .destination__list {
+  position: relative;
   margin-bottom: 27px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 46px;
+    margin-bottom: 50px;
+    .margin-left-tablet();
+    .margin-right-tablet();
+
+    &::before {
+      content: "";
+      position: absolute;
+
+      top: -38px;
+      left: -36px;
+
+      width: 141px;
+      height: 141px;
+
+      background-color: @basic-grey-background;
+      border-radius: 20px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     grid-row-start: 1;
     grid-row-end: 4;
+    margin-right: 0;
+    .margin-left-desktop();
+
+    &::before {
+      top: -71px;
+      left: -71px;
+    }
   }
 }
 
 .destination__button {
+  @media (min-width: @tablet-width) {
+    .margin-right-tablet();
+    .margin-left-tablet();
+    padding: 31px 32px 27px 33px;
+  }
+
   @media (min-width: @desktop-width) {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
+
+    width: 275px;
+
+    margin-left: 111px;
+    padding: 29px 36px 27px 35px;
+    align-self: center;
   }
 }

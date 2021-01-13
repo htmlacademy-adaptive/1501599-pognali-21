@@ -15,6 +15,14 @@
   background-color: @basic-yellow;
   border-radius: 10px;
 
+  &:hover {
+    background-color: @special-yellow-dark;
+  }
+
+  &:active {
+    color: @basic-blue-dark-opacity-30;
+  }
+
   @media (min-width: @tablet-width) {
     height: 80px;
     padding: 29px 38px 27px 33px;
@@ -23,5 +31,22 @@
     line-height: 24px;
 
     border-radius: 20px;
+  }
+}
+
+.button--decoration {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &::after {
+    content: "";
+
+    width: 0;
+    height: 0;
+
+    border-top: 5px solid transparent;
+    border-left: 10px solid @basic-blue;
+    border-bottom: 5px solid transparent;
   }
 }

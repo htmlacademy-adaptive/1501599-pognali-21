@@ -1,14 +1,21 @@
 .route {
-  padding: 63px 0 35px 0;
+  position: relative;
+
+  margin-top: -30px;
+  padding: 61px 0 35px 0;
+
   background-color: @basic-yellow;
   .background__border();
 
+  z-index: 1;
+
   @media (min-width: @tablet-width) {
-    padding: 102px 0 84px 0;
+    .margin-top-tablet();
+    padding: 124px 0 84px 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 116px 0 56px 0;
+    padding: 130px 0 56px 0;
   }
 }
 
@@ -16,11 +23,11 @@
   .wrapper-mobile();
 
   @media (min-width: @tablet-width) {
-    .wrapper-tablet();
+    .wrapper-tablet--min();
   }
 
   @media (min-width: @desktop-width) {
-    .wrapper-desktop();
+    .wrapper-desktop--min();
   }
 }
 
@@ -33,13 +40,46 @@
 }
 
 .route__address {
-  margin-bottom: 33px;
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 32px;
 
   font-weight: bold;
   font-size: 16px;
-  line-height: 137%;
+  line-height: 22px;
   text-transform: uppercase;
   color: @basic-blue;
+
+  &::before {
+    content: "";
+    display: block;
+
+    top: 0;
+    left: 0;
+
+    width: 45px;
+    height: 45px;
+
+    margin-right: 16px;
+
+    background-color: @basic-blue-dark-icon;
+    border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      width: 68px;
+      height: 68px;
+
+      margin-right: 26px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 90px;
+      height: 90px;
+
+      margin-right: 31px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     margin-bottom: 44px;
@@ -50,15 +90,39 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
+    margin-left: 154px;
+  }
+}
+
+.route__wrap {
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 
 .route__button {
+  padding: 19px;
+
   background-color: transparent;
   border: 3px solid @special-blue-accent;
   border-radius: 10px;
 
+  &:hover {
+    color: @white;
+    background-color: @special-blue-accent;
+  }
+
+  &:active {
+    color: @white-opacity-30;
+  }
+
   @media (min-width: @tablet-width) {
+    padding: 29px 34px;
     border-radius: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 324px;
+    margin-right: 5px;
   }
 }

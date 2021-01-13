@@ -1,19 +1,7 @@
-.people__level {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-
-  background-color: @black-opacity-60;
-}
-
 .people__item {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  padding: 17px 17px 20px 17px;
-
-  background-color: @white;
 
   @media (max-width: @mobile-width-only) {
     &:not(:last-child) {
@@ -26,15 +14,80 @@
   }
 }
 
+.people__persona {
+  position: relative;
+}
+
+.people__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 270px;
+
+  margin-top: -10px;
+  padding: 31px 36px 9px 36px;
+
+  background-color: @white;
+  border-radius: 0 0 10px 10px;
+}
+
+.people__level {
+  position: absolute;
+  top: 17px;
+  left: 17px;
+
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+
+  background-color: @black-opacity-60;
+}
+
 .people__name {
+  position: relative;
+  margin-bottom: 15px;
+
   font-weight: bold;
   font-size: 21px;
   line-height: 21px;
 
   color: @basic-blue;
 
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: 7px;
+    left: -15px;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 24px;
     line-height: 22px;
   }
+}
+
+.people__name--offline::before {
+  background-color: @special-red-status;
+}
+
+.people__name--online::before {
+  background-color: @special-green-status;
+}
+
+.people__flags {
+  margin-top: -44px;
+  margin-bottom: 5px;
+  z-index: 6;
+}
+
+.people__tags {
+  margin-bottom: 14px;
 }

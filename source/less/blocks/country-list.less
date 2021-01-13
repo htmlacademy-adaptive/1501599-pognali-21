@@ -1,9 +1,67 @@
+.country-list__item {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
 .country-list__item:not(:last-child) {
   margin-bottom: 10px;
 }
 
+.country-list__img {
+  @media (min-width: @tablet-width) {
+    order: 2;
+    width: auto;
+  }
+}
+
 .country-list__container {
+  display: flex;
+  justify-content: start;
+  position: relative;
+
+  margin-top: -20px;
+  padding: 26px 24px 24px;
+
   background-color: @white;
+  border-radius: 10px;
+
+  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+    width: 430px;
+
+    margin-top: 0;
+    padding: 30px 30px 20px;
+
+    border-radius: 10px 0 0 10px;
+  }
+}
+
+.country-list__container--without-padding {
+  padding-bottom: 3px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 20px;
+  }
+}
+
+.country-list__country {
+  position: relative;
+  margin-right: 12px;
+  width: 150px;
+
+  @media (min-width: @tablet-width) {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+}
+
+.country-list__country--without-margin {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .country-list__caption {
@@ -12,9 +70,83 @@
   line-height: 21px;
 
   color: @black;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: -40px;
+    left: 0;
+
+    width: 35px;
+    height: 24px;
+
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+
+    @media (min-width: @tablet-width) {
+      top: 0;
+      right: -220px;
+      left: auto;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+
+    margin-bottom: 5px;
+  }
+}
+
+.country-list__caption--france::before {
+  background-image: url("../../img/flags/France.png");
+}
+
+.country-list__caption--czech::before {
+  background-image: url("../../img/flags/Czech.png");
+}
+
+.country-list__caption--thailand::before {
+  background-image: url("../../img/flags/Thailand.png");
 }
 
 .country-list__desc,
 .country-list__user-count {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
   color: @special-grey-opacity-30;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.country-list__desc--width-s {
+  @media (min-width: @tablet-width) {
+    width: 132px;
+  }
+}
+
+.country-list__user-count {
+  align-self: start;
+
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+
+    width: 11px;
+    height: 12px;
+
+    margin-right: 7px;
+
+    background-image: url("../../img/persona.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
 }

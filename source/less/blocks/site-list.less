@@ -1,6 +1,4 @@
 .site-list {
-  margin-bottom: 51px;
-
   font-weight: 500;
   font-size: 30px;
   line-height: 117%;
@@ -8,16 +6,13 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 144px;
-
     font-size: 60px;
     text-align: left;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
-    justify-content: space-between;
-    width: 628px;
+    width: 630px;
 
     margin-bottom: 0;
 
@@ -26,8 +21,22 @@
   }
 }
 
+.site-list__item {
+  @media (min-width: @desktop-width) {
+    margin-right: 34px;
+  }
+}
+
 .site-list__link {
   color: @special-blue-accent;
+
+  &:hover {
+    color: @basic-yellow;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: @desktop-width) {
     color: @white;

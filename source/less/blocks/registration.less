@@ -1,15 +1,20 @@
 .registration {
-  padding: 105px 0 30px 0;
+  position: relative;
+  margin-top: -30px;
+  padding: 102px 0 30px 0;
 
   background-color: @special-blue-accent;
   .background__border();
 
+  z-index: 2;
+
   @media (min-width: @tablet-width) {
-    padding: 133px 0 60px 0;
+    .margin-top-tablet();
+    padding: 150px 0 57px 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 208px 0 104px 0;
+    padding: 185px 0 123px 0;
   }
 }
 
@@ -54,18 +59,28 @@
   margin-bottom: 29px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 65px;
+    margin-bottom: 64px;
   }
 
   @media (min-width: @desktop-width) {
     width: 655px;
     margin-bottom: 60px;
+    line-height: 31px;
   }
 }
 
 .registration__link {
   color: @basic-yellow;
   border-bottom: 1px solid @basic-yellow;
+
+  &:hover {
+    color: @special-orange;
+    border-color: @special-orange;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .registration__form {
@@ -97,6 +112,10 @@
 
   @media (min-width: @tablet-width) {
     width: 536px;
+    padding: 25px 36px;
+
+    font-size: 24px;
+    line-height: 24px;
     border-radius: 20px 0 0 20px;
   }
 
@@ -106,6 +125,21 @@
 }
 
 .registration__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &::after {
+    content: "";
+
+    width: 0;
+    height: 0;
+
+    border-top: 7px solid transparent;
+    border-left: 12px solid @basic-blue;
+    border-bottom: 7px solid transparent;
+  }
+
   @media (max-width: @mobile-width-only) {
     width: 60px;
     margin-left: -10px;
@@ -113,6 +147,11 @@
 
   @media (min-width: @tablet-width) {
     border-radius: 0 20px 20px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 325px;
+    padding-left: 36px;
   }
 }
 
@@ -139,12 +178,14 @@
 .registration__contacts {
   @media (min-width: @tablet-width) {
     align-self: start;
+    .margin-left-tablet();
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
     align-self: center;
-    width: 880px;
+    width: 868px;
+    margin: 0;
   }
 }
