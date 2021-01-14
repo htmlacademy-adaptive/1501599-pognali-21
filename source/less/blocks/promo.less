@@ -1,3 +1,23 @@
+.promo {
+  padding: 94px 0 0;
+
+  background-color: @basic-blue-dark;
+
+  background-image: url("../../img/traveller-illustration-mobile.png");
+  background-repeat: no-repeat;
+  background-position: 80px 222px;
+
+  @media (min-width: @tablet-width) {
+    padding: 162px 0 0;
+    background-position: 80% 65%;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+    background-position: 60% 30%;
+  }
+}
+
 .promo__wrapper {
   position: relative;
   .wrapper-mobile();
@@ -16,7 +36,7 @@
   margin-bottom: 30px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 200px;
+    margin-bottom: 210px;
   }
 
   @media (min-width: @desktop-width) {
@@ -24,13 +44,9 @@
     justify-content: space-between;
     max-width: 1320px;
 
-    margin-bottom: 70px;
-    padding-top: 110px;
+    margin-bottom: 100px;
+    padding-top: 100px;
   }
-}
-
-.promo {
-  background-color: @basic-blue-dark;
 }
 
 .promo__slogan,
@@ -39,29 +55,42 @@
 }
 
 .promo__slogan {
-  margin-bottom: 245px;
+  position: relative;
+  margin-bottom: 243px;
 
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
-  line-height: 111%;
+  line-height: 40px;
 
   text-align: center;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 86px;
     font-size: 60px;
+    line-height: 70px;
   }
 
   @media (min-width: @desktop-width) {
     text-align: left;
+    .margin-left-desktop();
     margin-bottom: 0;
   }
 }
 
 .promo__quote {
+  @media (max-width: @mobile-width-only) {
+    .margin-left-mobile();
+    width: 161px;
+  }
+
+  @media (min-width: @tablet-width) {
+    .margin-left-tablet();
+  }
+
   @media (min-width: @desktop-width) {
     width: 285px;
+    margin: 10px 23px 0 0;
   }
 }
 
@@ -73,5 +102,32 @@
 
   @media (min-width: @tablet-width) {
     display: none;
+  }
+}
+
+.promo__contact {
+  @media (max-width: @mobile-width-only) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.promo__authorization {
+  @media (max-width: @mobile-width-only) {
+    padding: 5px;
+  }
+}
+
+.promo__instruction {
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: -240px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: -140px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
   }
 }
