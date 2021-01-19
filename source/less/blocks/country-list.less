@@ -8,10 +8,21 @@
   margin-bottom: 10px;
 }
 
-.country-list__img {
+.country-list__item picture {
+  line-height: 0;
+  font-size: 0;
+
   @media (min-width: @tablet-width) {
     order: 2;
+  }
+}
+
+.country-list__img {
+  border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
     width: auto;
+    border-radius: 0 20px 20px 0;
   }
 }
 
@@ -35,7 +46,12 @@
     margin-top: 0;
     padding: 30px 30px 20px;
 
-    border-radius: 10px 0 0 10px;
+    border-radius: 20px 0 0 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 372px;
+    padding-top: 25px;
   }
 }
 
@@ -86,9 +102,17 @@
     background-size: contain;
 
     @media (min-width: @tablet-width) {
-      top: 0;
-      right: -220px;
+      top: -15px;
+      right: -238px;
       left: auto;
+
+      width: 70px;
+      height: 47px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 0;
+      right: -178px;
     }
   }
 
@@ -101,15 +125,27 @@
 }
 
 .country-list__caption--france::before {
-  background-image: url("../../img/flags/France.png");
+  background-image: url("../../img/flags/france.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/flags/france@2x.png");
+  }
 }
 
 .country-list__caption--czech::before {
-  background-image: url("../../img/flags/Czech.png");
+  background-image: url("../../img/flags/czechia.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/flags/czechia@2x.png");
+  }
 }
 
 .country-list__caption--thailand::before {
-  background-image: url("../../img/flags/Thailand.png");
+  background-image: url("../../img/flags/thailand.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/flags/thailand@2x.png");
+  }
 }
 
 .country-list__desc,

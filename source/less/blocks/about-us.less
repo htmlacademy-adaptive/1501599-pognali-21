@@ -1,13 +1,37 @@
 .about-us {
   position: relative;
 
-  background-image: url("../../img/about-mobile.png");
+  background-image: url("../../img/mobile/about-mobile.png"), url("../../img/back.svg");
   background-repeat: no-repeat;
-  background-position: 65% 100%;
+  background-position: 65% 100%, 0 56%;
   background-color: @special-blue-accent;
   .background__border();
 
   z-index: 6;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/mobile/about-mobile@2x.png");
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../../img/tablet-desktop/img-tablet.png"), url("../../img/back-tablet.svg");
+    background-position: 98% 76%, center 33%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/tablet-desktop/img-tablet@2x.png");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -50px;
+
+    background-image: url("../../img/desktop/img-back.png");
+    background-position: 92% 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/desktop/img-back@2x.png");
+    }
+  }
 }
 
 .about-us__wrapper {
@@ -15,28 +39,6 @@
   position: relative;
   padding: 310px 0 62px 0;
 
-  &::before {
-    content: "";
-    position: absolute;
-
-    bottom: 221px;
-    left: -25px;
-
-    width: 113px;
-    height: 132px;
-
-    background-color: @basic-blue-background;
-    border-radius: 20px;
-    z-index: -1;
-
-    @media (min-width: @desktop-width) {
-      top: 9%;
-      left: 0;
-
-      width: 212px;
-      height: 212px;
-    }
-  }
 
   @media (min-width: @tablet-width) {
     .wrapper-tablet();
@@ -45,7 +47,22 @@
 
   @media (min-width: @desktop-width) {
     .wrapper-desktop();
-    padding: 132px 0 163px 0;
+    padding: 182px 0 163px 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+
+      top: 15%;
+
+      width: 212px;
+      height: 212px;
+
+      background-color: @basic-blue-background;
+      border-radius: 20px;
+
+      z-index: -1;
+    }
   }
 }
 
