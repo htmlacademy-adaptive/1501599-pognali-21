@@ -1,7 +1,6 @@
 .tariffs {
   position: relative;
   margin-top: -20px;
-  padding: 72px 0 38px 0;
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
@@ -9,50 +8,51 @@
 
   background-color: @special-blue-dark;
   .background__border();
-  background-image: url("./../../img/tariffs/rates-mobile.png");
-  background-repeat: no-repeat;
-  background-position: 90% 16%;
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("./../../img/tariffs/rates-mobile@2x.png");
-  }
 
   z-index: 3;
 
   @media (min-width: @tablet-width) {
     .margin-top-tablet();
-    padding: 150px 0 61px;
-
-    background-image: url("./../../img/tariffs/rates-mobile.png"), url("./../../img/back-tariffs.svg");
-    background-position: 87% 91%, 93% 65%;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("./../../img/tariffs/rates-mobile@2x.png");
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 180px 0 163px 0;
-
-    background-image: url("./../../img/tariffs/rates-desktop.png"), url("./../../img/back-desktop.svg");
-    background-position: 89% 58%, 75% 60%;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("./../../img/tariffs/rates-mobile@2x.png");
-    }
   }
 }
 
 .tariffs__wrapper {
   position: relative;
   .wrapper-mobile();
+  padding: 72px 0 38px 0;
+
+  background-image: url("../img/tariffs/rates-mobile.png");
+  background-repeat: no-repeat;
+  background-position: 100% 55px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/tariffs/rates-mobile@2x.png");
+  }
 
   @media (min-width: @tablet-width) {
     .wrapper-tablet();
+
+    padding: 150px 0 61px;
+
+    background-image: url("../img/tariffs/rates-mobile.png"), url("../img/back-tariffs.svg");
+    background-position: 92% 91%, 100% 65%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/tariffs/rates-mobile@2x.png");
+    }
   }
 
   @media (min-width: @desktop-width) {
     .wrapper-desktop--min();
+
+    padding: 180px 0 163px 0;
+
+    background-image: url("../img/tariffs/rates-desktop.png"), url("../img/back-desktop.svg");
+    background-position: 100% 58%, 85% 60%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/tariffs/rates-mobile@2x.png");
+    }
 
     &::before {
       right: 115px;
