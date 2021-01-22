@@ -6,15 +6,32 @@
   background-color: @special-blue-accent;
   .background__border();
 
+  background-image: url("../img/smolov-back.png"), url("../img/mobile/rogovaya-back.png");
+  background-repeat: no-repeat;
+  background-position: 85% 65px, 0 26%;
+
   z-index: 4;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/smolov-back@2x.png"), url("../img/mobile/rogovaya-back@2x.png");
+  }
 
   @media (min-width: @tablet-width) {
     .margin-top-tablet();
     padding: 218px 0 87px 0;
+
+    background-image: url("../img/smolov-back.png"), url("../img/tablet-desktop/rogovaya-back-desktop.png");
+    background-position: 40px 42%, 85% 15%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/smolov-back@2x.png"), url("../img/tablet-desktop/rogovaya-back-desktop@2x.png");
+    }
   }
 
   @media (min-width: @desktop-width) {
     padding: 205px 0 134px 0;
+
+    background-position: 42% 31%, 16% 85%;
   }
 }
 
@@ -127,7 +144,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
-    margin-bottom: 126px;
+    margin-bottom: 81px;
   }
 
   @media (min-width: @desktop-width) {

@@ -10,10 +10,20 @@
   @media (min-width: @tablet-width) {
     .margin-top-tablet();
     padding: 149px 0 80px 0;
+
+    background-image: url("../img/flags-back.png");
+    background-repeat: no-repeat;
+    background-position: 92% 26%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/flags-back@2x.png");
+    }
   }
 
   @media (min-width: @desktop-width) {
     padding: 235px 0 103px 0;
+
+    background-position: 95% 65%;
   }
 }
 
@@ -70,7 +80,7 @@
   margin-bottom: 27px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 50px;
+    margin-bottom: 46px;
     .margin-left-tablet();
     .margin-right-tablet();
 
