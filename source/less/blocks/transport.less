@@ -1,0 +1,32 @@
+.transport {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 120px;
+}
+
+.transport__button:hover .transport__tooltip {
+  display: flex;
+}
+
+.transport__button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  background-color: transparent;
+  border: none;
+}
+
+.transport___icon {
+  fill: @basic-blue;
+  opacity: 0.15;
+}
+
+.transport___icon--current {
+  opacity: 1;
+}

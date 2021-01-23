@@ -93,7 +93,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 40px;
+    margin-bottom: 37px;
   }
 }
 
@@ -169,6 +169,14 @@
   border: none;
   background-color: transparent;
 
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: center;
@@ -190,6 +198,20 @@
 
       background-color: @basic-grey-background;
       border-radius: 50%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      left: 20px;
+
+      width: 27px;
+      height: 27px;
+
+      background-image: url("../img/icon-businessman.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
     }
   }
 }

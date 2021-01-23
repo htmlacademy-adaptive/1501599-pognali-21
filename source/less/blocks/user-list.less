@@ -1,5 +1,5 @@
 .user-list__authorization {
-  padding: 12px;
+  padding: 14px;
   flex-grow: 2;
 
   font-size: 17px;
@@ -21,9 +21,25 @@
 
 .user-list__contact {
   display: block;
+  position: relative;
   width: 50px;
   height: 50px;
   border-radius: 50%;
+}
+
+.user-list__icon {
+  position: absolute;
+  top: 12px;
+  left: 11px;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 16px;
+    left: 16px;
+  }
 }
 
 
