@@ -1,10 +1,12 @@
 .hero {
   padding: 12px 0;
   background-color: @special-blue-accent-background;
-  .background__border();
+  border-radius: 0 0 20px 20px;
 
   @media (min-width: @tablet-width) {
     padding: 66px 0;
+
+    border-radius: 0 0 55px 55px;
   }
 }
 
@@ -24,11 +26,33 @@
 }
 
 .hero__caption {
+  position: relative;
   font-weight: bold;
   font-size: 36px;
   line-height: 100%;
 
   color: @white;
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    bottom: -14px;
+
+    width: 214px;
+    height: 5px;
+
+    background-color: @special-orange;
+    border-radius: 4px;
+
+    @media (min-width: @tablet-width) {
+      bottom: -70px;
+
+      width: 358px;
+      height: 8px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     margin-left: 34px;

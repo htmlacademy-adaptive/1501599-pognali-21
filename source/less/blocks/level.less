@@ -44,15 +44,48 @@
   font-size: 14px;
 }
 
+.level--profile {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    align-items: start;
+  }
+}
+
 .level__number--profile,
 .level__text--profile {
   color: @basic-blue-dark;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -5px;
+    margin-left: 25px;
+  }
 }
 
 .level__number--profile {
+  line-height: 33px;
   font-size: 38px;
+  border-bottom: 1px solid @special-grey-opacity-30;
 }
 
 .level__text--profile {
+  margin-top: 8px;
   font-size: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 5px;
+    margin-left: 30px;
+  }
+}
+
+.level__icon--profile {
+  position: absolute;
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+    left: 0;
+
+    width: 94px;
+    height: 94px;
+  }
 }
