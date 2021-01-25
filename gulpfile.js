@@ -13,14 +13,6 @@ const svgstore = require("gulp-svgstore");
 const del = require("del");
 const sync = require("browser-sync").create();
 
-// Html
-
-const html = () => {
-  return gulp.src("source/*.html")
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest("build"));
-}
-
 // Styles
 
 const styles = () => {
@@ -32,14 +24,21 @@ const styles = () => {
       autoprefixer(),
       csso()
     ]))
-    .pipe(sourcemap.write("."))
     .pipe(rename("style.min.css"))
+    .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
 exports.styles = styles;
 
+// Html
+
+const html = () => {
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest("build"));
+}
 
 // Images
 
@@ -83,16 +82,17 @@ exports.sprite = sprite;
 
 // Copy
 
-const copy = () => {
-  return gulp.src([
-      "source/fonts/*.{woff2,woff}",
-      "source/*.ico",
-      "source/img/**/*.{jpg,png,svg}"
-    ],
+const copy = (done) => {
+  gulp.src([
+    "source/fonts/*.{woff2,woff}",
+    "source/*.ico",
+    "source/img/**/*.{jpg,png,svg}",
+  ],
     {
-      base: "source"
-    })
-    .pipe(gulp.dest("build"));
+    base: "source"
+  })
+    .pipe(gulp.dest("build"))
+  done();
 }
 
 exports.copy = copy;
@@ -100,11 +100,8 @@ exports.copy = copy;
 // Clean
 
 const clean = () => {
-  return del("dist");
-}
-
-exports.clean = clean;
-
+  return del("build");
+};
 
 // Server
 
@@ -122,11 +119,18 @@ const server = (done) => {
 
 exports.server = server;
 
+// Reload
+
+const reload = done => {
+  sync.reload();
+  done();
+}
+
 // Watcher
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html", gulp.series(html, sync.reload));
+  gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
 // Build
@@ -141,7 +145,7 @@ const build = gulp.series(
     images,
     createWebp
   )
-)
+);
 
 exports.build = build;
 
@@ -149,8 +153,8 @@ exports.build = build;
 exports.default = gulp.series(
   clean,
   gulp.parallel(
-    html,
     styles,
+    html,
     sprite,
     copy,
     createWebp
