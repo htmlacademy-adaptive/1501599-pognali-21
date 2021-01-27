@@ -23,6 +23,7 @@
 
   background-image: url("../img/tariffs/rates-mobile.png");
   background-repeat: no-repeat;
+  background-size: 100px auto;
   background-position: 100% 55px;
 
   @media (min-resolution: 2dppx) {
@@ -34,11 +35,12 @@
 
     padding: 150px 0 61px;
 
-    background-image: url("../img/tariffs/rates-mobile.png"), url("../img/back-tariffs.svg");
+    background-image: url("../img/tariffs/rates-mobile.png"), url("../img/back-tariffs.png");
+    background-size: 100px auto, 198px auto;
     background-position: 92% 91%, 100% 65%;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/tariffs/rates-mobile@2x.png");
+      background-image: url("../img/tariffs/rates-mobile@2x.png"), url("../img/back-tariffs@2x.png");
     }
   }
 
@@ -47,11 +49,12 @@
 
     padding: 180px 0 163px 0;
 
-    background-image: url("../img/tariffs/rates-desktop.png"), url("../img/back-desktop.svg");
+    background-image: url("../img/tariffs/rates-desktop.png"), url("../img/back-tariffs-desktop.png");
+    background-size: 198px auto, 446px auto;
     background-position: 100% 58%, 85% 60%;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/tariffs/rates-mobile@2x.png");
+      background-image: url("../img/tariffs/rates-mobile@2x.png"), url("../img/back-tariffs-desktop@2x.png");
     }
 
     &::before {
@@ -93,7 +96,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 40px;
+    margin-bottom: 37px;
   }
 }
 
@@ -169,6 +172,14 @@
   border: none;
   background-color: transparent;
 
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: center;
@@ -190,6 +201,20 @@
 
       background-color: @basic-grey-background;
       border-radius: 50%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      left: 20px;
+
+      width: 27px;
+      height: 27px;
+
+      background-image: url("../img/icon-businessman.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
     }
   }
 }

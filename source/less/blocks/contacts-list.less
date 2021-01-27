@@ -53,6 +53,41 @@
   }
 }
 
-.contacts-list__info--color-yellow {
+.contacts-list__icon {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+
+  fill: @basic-yellow;
+
+  @media (min-width: @tablet-width) {
+    top: 22px;
+    left: 24px;
+
+    width: 24px;
+    height: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 27px;
+    left: 27px;
+
+    width: 36px;
+    height: 34px;
+  }
+}
+
+.contacts-list__text--color-yellow {
   color: @basic-yellow;
+}
+
+.contacts-list__link:hover .contacts-list__text,
+.contacts-list__link:hover .contacts-list__icon {
+  color: @special-yellow-dark;
+  fill: @special-yellow-dark;
+}
+
+.contacts-list__link:active .contacts-list__text,
+.contacts-list__link:active .contacts-list__icon {
+  opacity: 0.3;
 }

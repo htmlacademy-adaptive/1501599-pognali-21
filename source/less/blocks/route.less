@@ -101,6 +101,9 @@
 }
 
 .route__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 19px;
 
   background-color: transparent;
@@ -124,5 +127,18 @@
   @media (min-width: @desktop-width) {
     width: 324px;
     margin-right: 5px;
+    padding: 0 26px 0 35px;
   }
+}
+
+.route__icon {
+  fill: @basic-blue;
+}
+
+.route__button:hover .route__icon {
+  fill: @white;
+}
+
+.route__button:active .route__icon {
+  opacity: 0.3;
 }

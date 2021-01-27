@@ -1,24 +1,27 @@
 .about-us {
   position: relative;
 
-  background-image: url("../img/mobile/about-mobile.png"), url("../img/back.svg");
+  background-image: url("../img/mobile/about-mobile.png"), url("../img/back.png");
   background-repeat: no-repeat;
   background-position: 65% 100%, 0 56%;
+  background-size: 292px auto, 113px auto;
+
   background-color: @special-blue-accent;
   .background__border();
 
   z-index: 6;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/mobile/about-mobile@2x.png");
+    background-image: url("../img/mobile/about-mobile@2x.png"), url("../img/back@2x.png");
   }
 
   @media (min-width: @tablet-width) {
-    background-image: url("../img/tablet-desktop/img-tablet.png"), url("../img/back-tablet.svg");
+    background-image: url("../img/tablet-desktop/img-tablet.png"), url("../img/back-tablet.png");
     background-position: 98% 76%, center 33%;
+    background-size: 368px auto, 688px auto;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/tablet-desktop/img-tablet@2x.png");
+      background-image: url("../img/tablet-desktop/img-tablet@2x.png"), url("../img/back-tablet@2x.png");
     }
   }
 
@@ -27,6 +30,7 @@
 
     background-image: url("../img/desktop/img-back.png");
     background-position: 92% 100%;
+    background-size: 630px auto;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/desktop/img-back@2x.png");
